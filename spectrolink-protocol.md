@@ -93,9 +93,9 @@ Calculated checksum varies based on all previous bytes. Exact algorithm unknown 
 ## Example Frames
 
 ### Heat All Zones
-```
 
-```
+    [202, 0, 167, 8, 64, 138, 1, 144]
+
 - Header: 202
 - Zones: 167 (all zones)
 - Command: 8 (ON)
@@ -105,9 +105,9 @@ Calculated checksum varies based on all previous bytes. Exact algorithm unknown 
 - Checksum: 144
 
 ### Cool Zone 1 Only
-```
 
-```
+    [202, 0, 161, 8, 128, 202, 1, 75]
+
 - Zones: 161 (zone 1)
 - Command: 8 (ON)
 - Mode: 128 (cool)
@@ -115,9 +115,9 @@ Calculated checksum varies based on all previous bytes. Exact algorithm unknown 
 - Checksum: 75
 
 ### System Off
-```
 
-```
+    [202, 0, 167, 0, 0, 74, 0, 104]
+
 - Command: 0 (OFF)
 - Mode: 0 (none)
 - State: 74 (off)
@@ -125,9 +125,9 @@ Calculated checksum varies based on all previous bytes. Exact algorithm unknown 
 - Checksum: 104
 
 ### Reset Command
-```
 
-```
+    [202, 0, 167, 32, 0, 0, 0, 126]
+
 - Command: 32 (reset)
 - All other bytes: 0
 - Checksum: 126
@@ -145,9 +145,7 @@ Where:
 
 ### Type 218 Frame Structure
 
-```
-[MSG_TYPE][DATA2][DATA3][DATA4][STATE][DATA6][CHECKSUM]
-```
+    [218][MSG_TYPE][DATA2][DATA3][DATA4][STATE][DATA6][CHECKSUM]
 
 **Byte 1 (MSG_TYPE)**: Message identifier (2, 3, 4, 10, 11, or 12)
 
