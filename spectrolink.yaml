@@ -1,0 +1,41 @@
+esphome:
+  name: spectrolink-heater
+
+external_components:
+  - source: github://petruknw/esphome-spectrolink-braemar
+    components: [spectrolink]
+
+esp8266:
+  board: d1_mini
+
+wifi:
+  ssid: "YourWiFi"
+  password: "YourPass"
+  min_auth_mode: WPA2
+
+uart:
+  tx_pin: GPIO5
+  baud_rate: 300
+  id: uart_bus
+
+api:
+logger:
+
+climate:
+  - platform: spectrolink
+    id: heater
+    name: "Braemar Heater"
+
+switch:
+  - platform: spectrolink
+    spectrolink_id: heater
+    zone: 0
+    name: "Zone 1"
+  - platform: spectrolink
+    spectrolink_id: heater
+    zone: 1
+    name: "Zone 2"
+  - platform: spectrolink
+    spectrolink_id: heater
+    zone: 2
+    name: "Zone 3"
