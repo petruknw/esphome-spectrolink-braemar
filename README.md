@@ -25,7 +25,7 @@ Replace your Braemar Spectrolink controller with an ESP8266 D1 Mini for full Hom
 - HLK-PM01 5V AC-DC module
 
 **PCB Build**:
-1. Build the PCB as per fonske MHI-AC-Ctrl PCB](https://github.com/ginkage/MHI-AC-Ctrl-ESPHome/blob/master/JLCPCB/Hardware.md), except U1
+1. Build the PCB as per [fonske MHI-AC-Ctrl PCB](https://github.com/ginkage/MHI-AC-Ctrl-ESPHome/blob/master/JLCPCB/Hardware.md), except U1
 2. Solder HLK-PM01 module:
    - AC input → Spectrolink RJ22 pins 1/2 (24VAC)
    - 5V output (Pin 4) → TSR Pad 1
